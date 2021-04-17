@@ -8,7 +8,7 @@ const Navbar = ({ email }) => {
   return (
     <div>
       <span>NAVBAR</span>
-      <span>{email}</span>
+      <span>{localStorage.getItem("userEmail")}</span>
       <button
         onClick={() => (
           dispatch(logOut()), localStorage.removeItem("accessToken")

@@ -13,6 +13,7 @@ const Login = () => {
     const result = await authWithGitHub();
     console.log(result.credential.accessToken, result.user.email);
     localStorage.setItem("accessToken", result.credential.token);
+    localStorage.setItem("userEmail", result.user.email);
     dispatch(logIn());
     dispatch(setUserEmail(result.user.email));
   };
