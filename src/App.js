@@ -50,7 +50,7 @@ function App() {
             <Navbar email={userEmail} />
             <BrowserRouter>
               <Switch>
-                <Route path="/home" exact={true} component={Home} />
+                <Route path="/" exact={true} component={Home} />
                 <Route path="/detail" component={ComicDetail} />
                 {/* <Route path="*"  component={404} /> */}
               </Switch>
