@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCount, setSelectedComic } from "../../features/comic/comicSlice";
+import { selectCount, setSelectedComic } from "../../redux/comic/comicSlice";
 import { Container } from "./styles";
 import useHome from "./hooks";
 import Grid from "@material-ui/core/Grid";
@@ -40,6 +40,7 @@ const Login = () => {
               sm={6}
               md={4}
               style={{ display: "flex", flexDirection: "column" }}
+              key={index}
             >
               {/* <span style={{ color: "#fff" }} key={index}>
                 {item.title}

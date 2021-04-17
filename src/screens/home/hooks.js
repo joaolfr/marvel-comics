@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { useLazyFetch } from "../../services/hooks";
 import { useSelector, useDispatch } from "react-redux";
-import { setList, selectCount } from "../../features/comic/comicSlice";
+import { setList, selectCount } from "../../redux/comic/comicSlice";
 // gateway.marvel.com/v1/public/comics?ts=1&apikey=2bc06882395b9339500cb01b1dfcbb6b&hash=5960290765b89d76491c34ed7f44521e
 
 export default () => {

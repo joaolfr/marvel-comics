@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { selectedComic } from "../../features/comic/comicSlice";
+import { selectedComic } from "../../redux/comic/comicSlice";
 
 const ComicDetail = () => {
   const comic = useSelector(selectedComic);
@@ -12,10 +12,22 @@ const ComicDetail = () => {
   }, []);
   return (
     <div>
-      <span>{comic.characters.items[0].name}</span>
+      <img src={comic.thumbnail.path + "/portrait_fantastic.jpg"} />
+      <br></br>
+      <hr />
+
+      <span>Title: {comic.title}</span>
+      <br></br>
+      {comic.characters.available > 0 && (
+        <>
+          <span>Characters: </span>
+          {comic.characters.items.map((item, index) => (
+            <span key={index}> {item.name}</span>
+          ))}
+        </>
+      )}
       <hr />
       <span>{comic.description}</span>
-      <img src="http://gateway.marvel.com/v1/public/creators/370/portrait_xlarge.jpg" />
       <Link to="/home">go home</Link>
     </div>
   );

@@ -1,29 +1,35 @@
-import { useState, useEffect, useCallback } from "react";
-import { useLazyFetch } from "./index";
-import axios from "axios";
-// import env from "../../../env";
+import firebase from "firebase/app";
+import "firebase/auth";
 
-export default () => {
-  const getUserToken = useCallback(async (code) => {
-    console.log("userCode: ", process.env.REACT_APP_CLIENT_SECRET);
-    try {
-      await axios({
-        url: "https://github.com/login/oauth/access_token",
-        method: "POST",
-        data: {
-          client_secret: process.env.REACT_APP_CLIENT_SECRET,
-          client_id: process.env.REACT_APP_CLIENT_ID,
-          code: code,
-        },
-      })
-        .then((res) => {
-          console.log("repsposta do token: ", res);
-        })
-        .catch((err) => {
-          console.log("err: ", err);
-        });
-    } catch {}
-  }, []);
-
-  return { getUserToken };
+const firebaseConfig = {
+  apiKey: "AIzaSyDC3JhOROFkzuBcKfoe4COuFdIr0tR6epo",
+  authDomain: "marvel-comics-db691.firebaseapp.com",
+  projectId: "marvel-comics-db691",
+  storageBucket: "marvel-comics-db691.appspot.com",
+  messagingSenderId: "955985372749",
+  appId: "1:955985372749:web:b44a7db55cc5eb4fd89e04",
 };
+
+firebase.initializeApp(firebaseConfig);
+
+export default firebase;
+
+async function authWithGitHub() {
+  const provider = new firebase.auth.GithubAuthProvider();
+  provider.addScope("repo");
+  provider.addScope("name");
+  provider.addScope("user:email");
+
+  const result = await firebase.auth().signInWithPopup(provider);
+
+  console.log("result firebase: ", result);
+
+  return result;
+  // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+  //   var token = result.credential.accessToken;
+  // The signed-in user info.
+  //   var user = result.user;
+  // ...
+}
+
+export { authWithGitHub };
