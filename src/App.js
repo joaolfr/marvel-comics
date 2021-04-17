@@ -50,7 +50,7 @@ function App() {
             <Navbar email={userEmail} />
             <HashRouter>
               <Switch>
-                <Route path="/home" exact={true} component={Home} />
+                <Route path="/" exact component={Home} />
                 <Route path="/detail" component={ComicDetail} />
                 {/* <Route path="*"  component={404} /> */}
               </Switch>

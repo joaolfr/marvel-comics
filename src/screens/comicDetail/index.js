@@ -28,7 +28,7 @@ const ComicDetail = () => {
       )}
       <hr />
       <span>{comic.description}</span>
-      <Link to="/home">go home</Link>
+      <Link to="/">go home</Link>
     </div>
   );
 };
