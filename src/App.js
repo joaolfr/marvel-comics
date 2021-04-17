@@ -3,7 +3,7 @@ import { Login, Home, ComicDetail } from "./screens";
 import "./App.css";
 import { ThemeProvider } from "styled-components";
 import { Light, Dark } from "./theme";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, HashRouter } from "react-router-dom";
 import { Navbar } from "./components";
 // import { useAuth } from "./services/hooks";
 import { authWithGitHub } from "./services/hooks/useAuth";
@@ -48,13 +48,13 @@ function App() {
         {isLogged && (
           <>
             <Navbar email={userEmail} />
-            <BrowserRouter>
+            <HashRouter>
               <Switch>
-                <Route path="/" exact={true} component={Home} />
+                <Route path="/home" exact={true} component={Home} />
                 <Route path="/detail" component={ComicDetail} />
                 {/* <Route path="*"  component={404} /> */}
               </Switch>
-            </BrowserRouter>
+            </HashRouter>
           </>
         )}
       </div>
