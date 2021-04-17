@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/marvel-comics/static/css/main.584b85fe.chunk.css",
-    "main.js": "/marvel-comics/static/js/main.80b79058.chunk.js",
-    "main.js.map": "/marvel-comics/static/js/main.80b79058.chunk.js.map",
+    "main.js": "/marvel-comics/static/js/main.c6e39883.chunk.js",
+    "main.js.map": "/marvel-comics/static/js/main.c6e39883.chunk.js.map",
     "runtime-main.js": "/marvel-comics/static/js/runtime-main.75de0a55.js",
     "runtime-main.js.map": "/marvel-comics/static/js/runtime-main.75de0a55.js.map",
-    "static/js/2.f8dd391c.chunk.js": "/marvel-comics/static/js/2.f8dd391c.chunk.js",
-    "static/js/2.f8dd391c.chunk.js.map": "/marvel-comics/static/js/2.f8dd391c.chunk.js.map",
+    "static/js/2.e7ee2421.chunk.js": "/marvel-comics/static/js/2.e7ee2421.chunk.js",
+    "static/js/2.e7ee2421.chunk.js.map": "/marvel-comics/static/js/2.e7ee2421.chunk.js.map",
     "index.html": "/marvel-comics/index.html",
     "static/css/main.584b85fe.chunk.css.map": "/marvel-comics/static/css/main.584b85fe.chunk.css.map",
-    "static/js/2.f8dd391c.chunk.js.LICENSE.txt": "/marvel-comics/static/js/2.f8dd391c.chunk.js.LICENSE.txt",
+    "static/js/2.e7ee2421.chunk.js.LICENSE.txt": "/marvel-comics/static/js/2.e7ee2421.chunk.js.LICENSE.txt",
     "static/media/marvel_icon.4c945f28.png": "/marvel-comics/static/media/marvel_icon.4c945f28.png"
   },
   "entrypoints": [
     "static/js/runtime-main.75de0a55.js",
-    "static/js/2.f8dd391c.chunk.js",
+    "static/js/2.e7ee2421.chunk.js",
     "static/css/main.584b85fe.chunk.css",
-    "static/js/main.80b79058.chunk.js"
+    "static/js/main.c6e39883.chunk.js"
   ]
 }
