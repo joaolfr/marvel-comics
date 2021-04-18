@@ -21,7 +21,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   animation: ${fadeIn} 1s;
-  background-image: url(${BG});
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(166, 166, 166, 0.8) 50%,
+      rgba(237, 232, 232, 0.5) 98%
+    ),
+    url(${BG});
+
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -35,9 +42,9 @@ export const LogoWrapper = styled.div`
 export const Comic = styled.span`
   color: yellow;
   position: absolute;
-  top: 190px;
+  top: 180px;
   transform: rotate(-25deg);
-  right: -60px;
+  right: -50px;
   font-family: "Zen Dots";
   font-size: 30px;
   font-weight: 700;
