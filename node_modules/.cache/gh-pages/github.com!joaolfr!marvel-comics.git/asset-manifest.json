@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/marvel-comics/static/css/main.875f5919.chunk.css",
-    "main.js": "/marvel-comics/static/js/main.539fe122.chunk.js",
-    "main.js.map": "/marvel-comics/static/js/main.539fe122.chunk.js.map",
+    "main.js": "/marvel-comics/static/js/main.8e2eb356.chunk.js",
+    "main.js.map": "/marvel-comics/static/js/main.8e2eb356.chunk.js.map",
     "runtime-main.js": "/marvel-comics/static/js/runtime-main.75de0a55.js",
     "runtime-main.js.map": "/marvel-comics/static/js/runtime-main.75de0a55.js.map",
     "static/js/2.036af7e2.chunk.js": "/marvel-comics/static/js/2.036af7e2.chunk.js",
@@ -10,7 +10,7 @@
     "index.html": "/marvel-comics/index.html",
     "static/css/main.875f5919.chunk.css.map": "/marvel-comics/static/css/main.875f5919.chunk.css.map",
     "static/js/2.036af7e2.chunk.js.LICENSE.txt": "/marvel-comics/static/js/2.036af7e2.chunk.js.LICENSE.txt",
-    "static/media/marvel_bg.9f36a7da.jpg": "/marvel-comics/static/media/marvel_bg.9f36a7da.jpg",
+    "static/media/marvel_bg.9f598ce3.jpg": "/marvel-comics/static/media/marvel_bg.9f598ce3.jpg",
     "static/media/marvel_icon.4c945f28.png": "/marvel-comics/static/media/marvel_icon.4c945f28.png",
     "static/media/universo-marvel.09fa3d18.jpg": "/marvel-comics/static/media/universo-marvel.09fa3d18.jpg"
   },
@@ -18,6 +18,6 @@
     "static/js/runtime-main.75de0a55.js",
     "static/js/2.036af7e2.chunk.js",
     "static/css/main.875f5919.chunk.css",
-    "static/js/main.539fe122.chunk.js"
+    "static/js/main.8e2eb356.chunk.js"
   ]
 }
