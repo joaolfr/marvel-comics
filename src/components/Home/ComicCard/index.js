@@ -1,24 +1,25 @@
 import React from "react";
-import { Wrapper } from "./styles";
+import { Wrapper, Title } from "./styles";
 import { Link } from "react-router-dom";
 
 const ComicCard = ({ uri, title, setComic }) => {
   return (
-    <Wrapper onClick={() => setComic()}>
-      <Link
-        to="/detail"
-        style={{
-          flex: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          flexDirection: "column",
-        }}
-      >
-        <img src={uri} style={{ width: "100%" }} />
-        <span>{title}</span>
-      </Link>
-    </Wrapper>
+    <Link
+      to="/detail"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        flexDirection: "row",
+        textDecoration: "none",
+        width: "100%",
+      }}
+    >
+      <Wrapper onClick={() => setComic()}>
+        <img alt="comic" src={uri} style={{ width: 200, height: 270 }} />
+        <Title>{title}</Title>
+      </Wrapper>
+    </Link>
   );
 };
 export default ComicCard;
