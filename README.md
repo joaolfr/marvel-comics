@@ -1,44 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# MARVEL _tasks_ - Aplicação para listagem de Comics da Marvel
 
-## Available Scripts
+A aplicação está hospedada na plataforma HEROKU e pode ser acessada clicando [Aqui](https://app-hubtasks.herokuapp.com/)  podendo ser acessada também em um aparelho mobile, visto que a mesma é responsiva.
+### Usuário para teste:
+    email: teste@teste.com
+    password: teste
 
-In the project directory, you can run:
+Para esse usuário foram criadas algumas tasks como exemplo, mas podendo também ser criado outro usuário para testar as funcionalidades
+#
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para rodar a aplicação localmente, com o docker instalado em sua máquina, clone o projeto e digite no terminal dentro do diretório do projeto:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    docker-compose up --build -d
+E acesse:
+    [HUBtasks](http://localhost)
+#
+No desenvolvimento desse projeto foram usadas as seguintes tecnologias:
+    
+  - __ReactJS__ ( desenolvimento da interface Web responsiva )
+  - __NodeJS__ ( desenvolvimento  da API que realiza o gerenciamento das tasks)
+  - __MongoDB__ ( base de dados )
 
-### `yarn test`
+E as seguintes ferramentas:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Docker
+Usado para conteneirizar a aplicação facilitando sua execução e manutenção. Utilizei pois mesmo sendo um requisito não obrigatório da entrega, facilita a manutenção da aplicação quando hospedada em algum servidor de produção.
 
-### `yarn build`
+### MongoDB Atlas
+Banco como serviço usado como base de dados para a aplicação. Foi utilizado por ser um serviço gratuito online de banco além de centralizar os dados da aplicação não importa onde esteja sendo executada.
+### Git Flow
+Ferramenta utilizada para melhor gerenciar o versionamento do projeto ( ex: branchs, commits).
+#
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Diversas bibliotecas e frameworks foram usados visando otimização dos processos. 
 
-### `yarn eject`
+Algumas deles foram:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Backend
+  - __Express__: microframework utilizado para criação de aplicações web
+  - __Mongoose__: espécie de object data mapping para facil manipulação dos dados fornecidos pelo banco Mongo
+  
+ #### Frontend
+  - __Axios__: biblioteca usada para realização de chamadas REST
+  - __React Router Dom__: usado para navegação entre páginas e componentes no React
+  - __Redux__: provê um melhor controle da aplicação, possibilitando um melhor controle do estado global da aplicação
+  - __Redux Saga__: middleware utilizado para gerenciar os side-effects da aplicação, assim como ações assíncronas referentes principalmente a chamadas HTTP.
+  
+  #
+  ## MELHORIAS
+  
+ Aqui irei listar possíveis melhorias que poderiam ser feitas com uma suposta decisão de evolução do projeto
+ 
+ 
+1. Caso o backend precise ser publicamente exposto, poderia ser adicionado uma interface para documentação do mesmo, tal como SWAGGER.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Adicionar metodo de autenticacao com token (ex:JWT)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Relação entre tabelas (ex: tasks dentro de um projeto), e o projeto pode ser compartilhado entre diferentes usuários.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Criar uma tela com permissão para gerente (super user), onde ele teria acesso aos dados de todos os usuários e todas as tasks.
 
-## Learn More
+5. Adicionar as respectivas importâncias das entregas (prioridades).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Utilizar Styled Components, para facilitar a criação de componentes estilizados na aplicação.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. Juntamente com a aplicação, disponibilizar um container com uma imagem do banco utilizado (Ex: mongo)
+
+8. Segurança adicionando variáveis de ambiente importante da aplicação
+
+9. Adicionar alguns indicadores de status (activity loader) para dar ao cliente noção de telas carregando 
+  ou requisições sendo efetuadas.
+
+10. Proporcionar ao usuário ações como resgatar tasks antigas, a funcionalidade SOFT DELETE foi implementada
+no backend porém o usuário não tem conhecimento da mesma ainda. 
+
