@@ -6,7 +6,7 @@ import { setList } from "../../redux/comic/comicSlice";
 export default () => {
   const dispatch = useDispatch();
   const [searchComics, { loading, error }] = useLazyFetch({
-    url: `/comics?ts=1&apikey=${process.env.REACT_APP_MARVEL_API_KEY}&hash=${process.env.REACT_APP_MARVEL_API_HASH}`,
+    url: `/comics?ts=1&limit=50&&apikey=${process.env.REACT_APP_MARVEL_API_KEY}&hash=${process.env.REACT_APP_MARVEL_API_HASH}`,
     method: "GET",
   });
 
@@ -22,5 +22,5 @@ export default () => {
     }
   }, []);
 
-  return { getComics, loading };
+  return { getComics, loading, error };
 };

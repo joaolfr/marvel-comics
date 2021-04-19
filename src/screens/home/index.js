@@ -11,7 +11,7 @@ import { ComicCard } from "../../components";
 const Login = () => {
   const comic = useSelector(selectCount);
   const dispatch = useDispatch();
-  const { getComics, loading, marvelComics } = useHome();
+  const { getComics, loading, error } = useHome();
 
   useEffect(() => {
     if (comic.length === 0) {
@@ -35,6 +35,7 @@ const Login = () => {
           width: "100%",
         }}
       >
+        {error && <span>Erro ao carregar quadrinhos... :(</span>}
         {loading && (
           <>
             <LoadSpan>Carregando comics</LoadSpan>

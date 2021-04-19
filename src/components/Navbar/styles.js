@@ -22,6 +22,22 @@ export const Wrapper = styled.div`
   animation: ${fadeIn} 1s;
 `;
 
+export const LogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;
+export const Comic = styled.span`
+  color: yellow;
+  position: absolute;
+  top: 60px;
+  transform: rotate(-25deg);
+  right: -10px;
+  font-family: "Zen Dots";
+  font-size: 10px;
+  font-weight: 700;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -32,6 +48,68 @@ export const UserInfoWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+`;
+
+const dropDown = keyframes`
+  from {
+    height: 0;
+  }
+
+  to {
+    height:50px;
+  }
+`;
+const dropUp = keyframes`
+  from {
+    height: 50px;
+    display:block;
+  }
+
+  to {
+    height:0;
+    display:none;
+  }
+`;
+
+export const AvatarWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+
+  .drop {
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    padding: 12px 16px;
+    z-index: 1;
+    right: 10px;
+    transition: 1s;
+    display: none;
+  }
+
+  &:hover {
+    .drop {
+      animation: ${dropDown} 1s;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drop:hover {
+      background: red;
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+    }
+  }
+  &:not(:hover) {
+    .drop {
+      animation: ${dropUp} 1s;
+      height: 0;
+    }
+  }
 `;
 
 export const Avatar = styled.img`
@@ -47,9 +125,6 @@ export const LogoutIcon = styled(IoIosLogOut).attrs(() => ({
 }))`
   cursor: pointer;
   transition: 0.2s;
-  &:hover {
-    transform: translate(0, -5px);
-  }
 `;
 
 export const Title = styled(Text).attrs(() => ({
