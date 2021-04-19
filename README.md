@@ -1,6 +1,6 @@
 # MARVEL _comics_ - Aplicação para listagem de Comics da Marvel
 
-A aplicação está hospedada na plataforma HEROKU e pode ser acessada clicando [Aqui](https://joaolfr.github.io/marvel-comics/) podendo ser acessada também em um aparelho mobile, visto que a mesma é responsiva.
+A aplicação está hospedada no Github Pages e pode ser acessada clicando [Aqui](https://joaolfr.github.io/marvel-comics/) podendo ser acessada também em um aparelho mobile, visto que a mesma é responsiva.
 
 #
 
